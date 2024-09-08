@@ -27,7 +27,3 @@ type PdfGeneratorTests() =
     member _.Cleanup() =
         if File.Exists(pdfPath) then
             File.Delete(pdfPath)
-    
-    [<OneTimeSetUp>]
-     member _.Setup() =
-         Microsoft.Playwright.Program.Main([| "install" |])

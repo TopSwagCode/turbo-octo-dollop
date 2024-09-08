@@ -26,6 +26,11 @@ type CvHtmlGeneratorTests() =
              "Cloud"
              "DevOps"
             ]
+            Skills = [
+                "C#"
+                "F#"
+                "Q#"
+            ] 
         }
 
         // Act
@@ -40,5 +45,8 @@ type CvHtmlGeneratorTests() =
         resultHtml |> should contain "<div class=\"tag\">Agile</div>"
         resultHtml |> should contain "<div class=\"tag\">Cloud</div>"
         resultHtml |> should contain "<div class=\"tag\">DevOps</div>"
+        resultHtml |> should contain "<div class=\"tag\">C#</div>"
+        resultHtml |> should contain "<div class=\"tag\">F#</div>"
+        resultHtml |> should contain "<div class=\"tag\">Q#</div>"
         resultHtml |> should contain "<tr><td>Company A</td><td>Developer</td><td>2018-2020</td><td>New York</td></tr>"
         resultHtml |> should contain "<tr><td>Company B</td><td>Senior Developer</td><td>2020-2023</td><td>San Francisco</td></tr>"

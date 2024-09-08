@@ -8,7 +8,3 @@ This can be done manually or by running the following code:
 ``` F#
 let _ = Microsoft.Playwright.Program.Main([| "install" |])
 ```
-
-There is also Integration tests that install the tool that can be run.
-
-Feel free to come with feedback. Styling is still work in progress.

@@ -17,17 +17,13 @@ module CvHtmlGenerator =
                         body {
                             font-family: Arial, sans-serif;
                             line-height: 1.6;
-                            margin: 0;
+                            margin: 30px 20px;
                         }
                         h1, h2 {
-                            color: #333;
+                            color: #000000;
                         }
                         .contact, .skills, .languages, .certifications, .summary, .education, .experience {
                             margin-bottom: 20px;
-                        }
-                        .contact p, .skills ul, .languages ul, .certifications ul, .education ul, .experience ul {
-                            margin: 0;
-                            padding: 0;
                         }
                         .skills li, .languages li, .certifications li, {
                             list-style-type: none;
@@ -40,21 +36,23 @@ module CvHtmlGenerator =
                             text-decoration: underline;
                         }
                         .responsive-img {
-                        max-width: 100%;
-                        height: auto;
-                        width: 200px;
+                            max-width: 100%;
+                            height: auto;
+                            width: 200px;
+                            max-height: 300px;
+                            object-fit: contain;
                         }
                         
                         .tag {
                           display: inline-block;
-                          padding: 10px 20px;
-                          background-color: #4CAF50; /* Green background color */
-                          color: white;              /* White text color */
-                          border-radius: 25px;        /* Rounded corners */
-                          font-size: 16px;            /* Text size */
-                          font-weight: bold;          /* Bold text */
-                          text-align: center;         /* Center the text */
-                          border: 2px solid #3e8e41;  /* Optional border */
+                          padding: 5px 10px;
+                          margin: 2px 4px;
+                          color: #000000;
+                          border-radius: 5px 20px 5px;
+                          font-size: 10px;
+                          font-weight: bold;
+                          text-align: center;
+                          border: 2px solid #808080;
                         }
                     
                         """
@@ -64,30 +62,15 @@ module CvHtmlGenerator =
                 header [] [
                     h1 [] [ str applicant.Name ]
                     h2 [] [ str applicant.Title ]
-                    img [ _src "https://topswagcode.com/assets/banner-logo.png"; _alt "Logo"; _class "responsive-img" ]
-                    img [ _src "https://media.licdn.com/dms/image/v2/D4E03AQHW-BS1wrggPQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690660764223?e=1730937600&v=beta&t=m1tolOM-nkgRtBc_UC4MSoKQARc5c17k2JTx0cujSDA"; _alt "Logo"; _class "responsive-img" ]
+                    div [ _style "display: flex; justify-content: space-around;" ] [
+                        img [ _style "border-radius: 200px;"; _src "https://media.licdn.com/dms/image/v2/D4E03AQHW-BS1wrggPQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690660764223?e=1730937600&v=beta&t=m1tolOM-nkgRtBc_UC4MSoKQARc5c17k2JTx0cujSDA"; _alt "Logo"; _class "responsive-img" ]
+                        img [ _src "https://topswagcode.com/assets/banner-logo.png"; _alt "Logo"; _class "responsive-img" ]
+                    ]
                 ]
                 section [ _class "contact" ] [
                     h2 [] [ str "Contact" ]
                     p [] [ str $"Phone: {applicant.PhoneNumber}" ]
                     p [] [ a [ _href $"mailto:{applicant.Email}" ] [ str applicant.Email ] ]
-                ]
-                section [ _class "skills" ] [
-                    h2 [] [ str "Top Skills" ]
-                    ul [] [
-                        li [] [ str "Technology Adoption" ]
-                        li [] [ str "Challenge Driven" ]
-                        li [] [ str "Teamwork" ]
-                    ]
-                ]
-                section [ _class "languages" ] [
-                    h2 [] [ str "Languages" ]
-                    ul [] [
-                        li [] [ str "Danish" ]
-                        li [] [ str "English" ]
-                        li [] [ str "German" ]
-                        
-                    ]
                 ]
                 section [ _class "summary" ] [
                     h2 [] [ str "Summary" ]
@@ -97,6 +80,11 @@ module CvHtmlGenerator =
                             a [ _href "https://www.youtube.com/watch?v=jkve_v1Xxak"; _target "_blank" ] [ str "videos" ]
                             str " ). I have a personal goal of getting to do a conference talk at some point in the future."]
                     p [] [ str "Besides being a massive nerd, I also love spending time with my family, traveling, and experiencing new stuff. Using my creative side on painting. Geeking out with my partner playing tabletop games. Some more personal facts: I have spent 13 years with my partner Ina. We have a son (Storm) who is 5 years old. We also have a 12-year-old cat. Last year we moved to a new house in Østbirk where we plan on staying for the next many years." ]
+                    p [] [
+                        str "Sorry if the CV is a bit ugly. It´s created using a CV generator I wrote in F# and is a work in progress. The code can be found "
+                        a [ _href "https://github.com/TopSwagCode/turbo-octo-dollop"; _target "_blank" ] [ str "here" ]
+                        str " on github."
+                        ]
                     p [] [ str "Strengths:" ]
                     ul [] [
                         li [] [ str "Strong team player." ]
@@ -108,6 +96,15 @@ module CvHtmlGenerator =
                     ul [] [
                         li [] [ str "Taking too much on my plate." ]
                         li [] [ str "Singing" ]
+                    ]
+                ]
+                section [ _class "languages" ] [
+                    h2 [] [ str "Languages" ]
+                    ul [] [
+                        li [] [ str "Danish" ]
+                        li [] [ str "English" ]
+                        li [] [ str "German" ]
+                        
                     ]
                 ]
                 section [ _class "education" ] [
@@ -153,6 +150,13 @@ module CvHtmlGenerator =
                     div [] (
                         applicant.BuzzWords |> List.map (fun (buzzWord) ->
                             div [ _class "tag"] [ str buzzWord ])
+                    )
+                ]
+                section [ _class "Skills" ] [
+                    h2 [] [ str "Skills" ]
+                    div [] (
+                        applicant.Skills |> List.map (fun (skill) ->
+                            div [ _class "tag"] [ str skill ])
                     )
                 ]
             ] ]

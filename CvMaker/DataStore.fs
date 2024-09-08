@@ -4,8 +4,7 @@ module DataStore =
     open CommonTypes
     let getAwesomeApplicant =
         let experiences: List<Experience> = [
-            { Company = "InCommodities"; Title = "Senior Software Engineering"; Period = "December 2024 - Present (Lets gooo)"; Location = "Århus Area, Denmark" }
-            { Company = "iPaper"; Title = "Senior Software Engineering"; Period = "February 2023 - November 2024 (1 year 10 months)"; Location = "Midtjylland, Denmark" }
+            { Company = "iPaper"; Title = "Senior Software Engineering"; Period = "February 2023 - Present"; Location = "Midtjylland, Denmark" }
             { Company = "A.P. Moller - Maersk"; Title = "Senior Software Developer"; Period = "December 2021 - February 2023 (1 year 3 months)"; Location = "Copenhagen" }
             { Company = "BRØLSTÆRK"; Title = "Senior Software Developer"; Period = "September 2019 - December 2021 (2 years 4 months)"; Location = "Lystrup, Middle Jutland, Denmark" }
             { Company = "First Agenda"; Title = "Senior Software Engineer"; Period = "November 2016 - September 2019 (2 years 11 months)"; Location = "Århus Area, Denmark" }
@@ -29,11 +28,44 @@ module DataStore =
             "SOA"
             "SAFe"
             "MVC"
+            "Jamstack"
             "System Integration"
             "Large Systems / Scalability"
             "Databases"
             "Testing"
             "Security"
+            "OIDC"
+            "OAuth2"
+            "Authentication"
+            "Authorization"
         ]
         
-        { Name = "Joshua Jesper Krægpøth Ryder"; Title = "Senior Software Engineer"; Birthyear = 1987; Email = "Josh@topswagcode.com"; PhoneNumber = "97979797"; Experiences = experiences; BuzzWords = buzzWords }
+        let skills = [
+            "C#"
+            "ASP.NET"
+            "Dotnet Core"
+            "Dotnet"
+            "Dotnet Framework"
+            "Docker"
+            "MSMQ"
+            "RabbitMQ"
+            "SQS"
+            "SNS"
+            "Razor"
+            "Entity Framework"
+            "SQL"
+            "Java"
+            "HTML5"
+            "JavaScript"
+            "Svelte"
+            "CSS"
+            "Visual Studio"
+            "Rider"
+            "Open Telemetry"
+            "Git"
+            "Jira"
+            "Azure"
+            "AWS"
+        ]
+        
+        { Name = "Joshua Jesper Krægpøth Ryder"; Title = "Senior Software Engineer"; Birthyear = 1987; Email = "Josh@topswagcode.com"; PhoneNumber = "88888888"; Experiences = experiences; BuzzWords = buzzWords; Skills = skills }
