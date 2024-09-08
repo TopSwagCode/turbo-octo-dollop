@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -12,8 +12,6 @@
         <Compile Include="PdfGenerator.fs" />
         <Compile Include="Program.fs"/>
         <PackageReference Include="Giraffe.ViewEngine" Version="1.4.0" />
-        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.8" />
-        <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
         <PackageReference Include="Microsoft.Playwright" Version="1.46.0" />
     </ItemGroup>
 
