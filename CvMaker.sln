@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CvMaker", "CvMaker\CvMaker.fsproj", "{70A3C893-912C-4C94-90CB-C78C09E0AD29}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CvMaker.UnitTest", "CvMaker.UnitTest\CvMaker.UnitTest.fsproj", "{0FF553CE-D498-431D-940C-67E36F05855B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "CvMaker.IntegrationTest", "CvMaker.IntegrationTest\CvMaker.IntegrationTest.fsproj", "{F126D62D-99AE-409E-B92E-FBF3729DF45F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{70A3C893-912C-4C94-90CB-C78C09E0AD29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70A3C893-912C-4C94-90CB-C78C09E0AD29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70A3C893-912C-4C94-90CB-C78C09E0AD29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FF553CE-D498-431D-940C-67E36F05855B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FF553CE-D498-431D-940C-67E36F05855B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FF553CE-D498-431D-940C-67E36F05855B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FF553CE-D498-431D-940C-67E36F05855B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F126D62D-99AE-409E-B92E-FBF3729DF45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F126D62D-99AE-409E-B92E-FBF3729DF45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F126D62D-99AE-409E-B92E-FBF3729DF45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F126D62D-99AE-409E-B92E-FBF3729DF45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

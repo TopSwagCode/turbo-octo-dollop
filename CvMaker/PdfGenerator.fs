@@ -3,7 +3,7 @@
 open CvMaker.CommonTypes
 open Microsoft.Playwright
 
-type PdfGenerator() = // Should we have init in here as a method aswell?
+type PdfGenerator() =
     member this.Generate(html: string) =
         async {
             use! playwright = Playwright.CreateAsync() |> Async.AwaitTask

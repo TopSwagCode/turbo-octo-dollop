@@ -37,4 +37,3 @@ module DataStore =
         ]
         
         { Name = "Joshua Jesper Krægpøth Ryder"; Title = "Senior Software Engineer"; Birthyear = 1987; Email = "Josh@topswagcode.com"; PhoneNumber = "97979797"; Experiences = experiences; BuzzWords = buzzWords }
-
